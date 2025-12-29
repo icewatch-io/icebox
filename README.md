@@ -34,13 +34,13 @@ Icebox officially supports only Ubuntu Server 24.04 (and minor versions). You ca
 
 You can install Icebox on Ubuntu 24.04 systems with the following command:
 
-```
+```bash
 curl -s https://raw.githubusercontent.com/icewatch-io/icebox/main/setup.sh | sudo bash
 ```
 
 While Ubuntu Server 24.04 is the only officially supported platform, you can install Icebox on other platforms with this:
 
-```
+```bash
 curl -s https://raw.githubusercontent.com/icewatch-io/icebox/main/setup.sh | sudo bash -s -- --force
 ```
 
@@ -50,7 +50,7 @@ curl -s https://raw.githubusercontent.com/icewatch-io/icebox/main/setup.sh | sud
 
 You can start Icebox using its systemd service:
 
-```
+```bash
 systemctl start icebox
 ```
 
@@ -58,7 +58,7 @@ systemctl start icebox
 
 You can stop Icebox using its systemd service:
 
-```
+```bash
 systemctl stop icebox
 ```
 
@@ -66,7 +66,7 @@ systemctl stop icebox
 
 You can restart Icebox using its systemd service:
 
-```
+```bash
 systemctl start icebox
 ```
 
@@ -107,7 +107,7 @@ Icebox looks for a configuration file in `/etc/icebox/icebox.json`.
 
 Example:
 
-```
+```json
 {
   "icebox": {
     "name": "icebox1"
@@ -163,7 +163,7 @@ Example:
 
 Icebox config options include the following:
 
-```
+```json
 "icebox": {
   "name": "ICEBOX_NAME"
 }
@@ -177,7 +177,7 @@ The name of the Icebox. This will appear in alerts and can be named after the ne
 
 Log config options include the following:
 
-```
+```json
 "log": {
   "level": "INFO",
   "file": "/var/log/icebox/icebox.log"
@@ -196,7 +196,7 @@ The file in which to save log messages.
 
 Iptables config options include the following:
 
-```
+```json
 "iptables": {
   "log_file": "/var/log/kern.log"
 }
@@ -214,7 +214,7 @@ SMTP settings can be configured to allow the Icebox to send email notifications.
 
 SMTP config options include the following:
 
-```
+```json
 "smtp": {
   "sending_enabled": true,
   "to": "admin@mycompany.com",
@@ -258,7 +258,7 @@ Whether to use STARTTLS when connecting to the SMTP server.
 
 Snowdog config options include the following:
 
-```
+```json
 "snowdog": {
   "learning": true,
   "db_file": "/opt/icebox/snowdog.sqlite",
@@ -310,7 +310,7 @@ A substring to match in the alert's body.
 
 Icepick config options include the following:
 
-```
+```json
 "icepick": [
   {
     "name": "CHECK_NAME",
